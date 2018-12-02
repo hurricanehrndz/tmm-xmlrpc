@@ -10,7 +10,7 @@ class RequestHandler(SimpleXMLRPCRequestHandler):
 
 # Create server
 def start_server(tiny_media_manager):
-    server = SimpleXMLRPCServer(('localhost', 8000),
+    server = SimpleXMLRPCServer(('0.0.0.0', 8000),
                                 requestHandler=RequestHandler)
 
     server.register_instance(tmm(tiny_media_manager))
